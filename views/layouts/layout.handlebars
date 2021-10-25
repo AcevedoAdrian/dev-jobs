@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/app.css">
+  <title>{{ namePage }}</title>
+</head>
+
+<body>
+
+  <div class="nombre-sitio contenedor">
+    <h1><a href="/">DevJovs</a></h1>
+    {{#if bar}}
+    <div class="buscador">
+      <form action="#">
+        <input type="text" class="buscar">
+        <input type="submit" value="Buscar">
+      </form>
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="header site-header contenedor separador">
+    <h2>
+      {{namePage}}
+    </h2>
+    {{#if tagline}}
+    <p class="tagline"> {{tagline}}</p>
+    {{/if}}
+    {{#if button}}
+    <a href="/bacchante/new" class="btn btn-azul">Publicar Nueva Vacante</a>
+
+    {{/if}}
+  </div>
+
+
+  <div class="conteido-principal contenedor">
+    {{!-- Para poder llamar a las distintos handlebars definidos --}}
+    {{{body}}}
+  </div>
+</body>
+
+</html>
